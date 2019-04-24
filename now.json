@@ -16,8 +16,14 @@
             "use": "@now/node"
         },
         {
-            "src": "packages/venia-concept/{.env.dist,static,templates,server.js,venia-upward.yml,validate-environment.js}",
+            "src": "packages/venia-concept/@(.env.dist,static/**/*,templates/*,server.js,venia-upward.yml,validate-environment.js)",
             "use": "@now/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/*",
+            "dest": "packages/venia-concept/server.js"
         }
     ],
     "regions": [
