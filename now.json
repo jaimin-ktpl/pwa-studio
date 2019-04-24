@@ -1,10 +1,31 @@
 {
-    "name": "magento-venia",
-    "alias": ["magento-venia", "veniapwa.com"],
-    "engines": {
-        "node": "10.x.x"
+    "name": "venia-dev",
+    "alias": [
+        "venia-dev"
+    ],
+    "scope": "magento-research",
+    "env": {
+        "UPWARD_JS_BIND_LOCAL": ""
     },
-    "public": true,
-    "version": 1,
-    "type": "npm"
+    "builds": [
+        {
+            "src": "packages/venia-concept/server.js",
+            "use": "@now/node"
+        },
+        {
+            "src": [
+                "packages/venia-concept/.env.dist",
+                "packages/venia-concept/static",
+                "packages/venia-concept/templates",
+                "packages/venia-concept/server.js",
+                "packages/venia-concept/venia-upward.yml",
+                "packages/venia-concept/validate-environment.js"
+            ]
+        }
+    ],
+    "regions": [
+        "sfo1",
+        "bru"
+    ],
+    "public": true
 }

@@ -1,4 +1,3 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = 'test';
 }
@@ -79,4 +78,14 @@ async function serve() {
 }
 
 console.log('Launching staging server...\n');
-serve();
+const appStarted = serve();
+
+// This part is for now.sh version 2 and other serverless deployments.
+// A lambda probably won't execute against more than one request, but juuuuust
+// in case it does, let's cache the server startup procedure.
+let app;
+
+module.exports = async (req, res) => {
+    app = app || (await appStarted);
+    app(req, res);
+};
