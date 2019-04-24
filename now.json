@@ -20,7 +20,8 @@
                 "packages/venia-concept/server.js",
                 "packages/venia-concept/venia-upward.yml",
                 "packages/venia-concept/validate-environment.js"
-            ]
+            ],
+            "use": "@now/static"
         }
     ],
     "regions": [
