@@ -5,7 +5,7 @@
     ],
     "scope": "magento-research",
     "env": {
-        "UPWARD_JS_BIND_LOCAL": false
+        "UPWARD_JS_BIND_LOCAL": "false"
     },
     "builds": [
         {
