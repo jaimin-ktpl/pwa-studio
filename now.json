@@ -9,6 +9,9 @@
     },
     "builds": [
         {
+            "config": {
+                "maxLambdaSize": "50mb"
+            },
             "src": "packages/venia-concept/server.js",
             "use": "@now/node"
         },
