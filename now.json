@@ -1,7 +1,7 @@
 {
-    "name": "venia-dev",
+    "name": "venia",
     "alias": [
-        "venia-dev"
+        "magento-venia-develop"
     ],
     "scope": "magento-research",
     "env": {
