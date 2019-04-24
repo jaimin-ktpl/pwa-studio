@@ -13,14 +13,7 @@
             "use": "@now/node"
         },
         {
-            "src": [
-                "packages/venia-concept/.env.dist",
-                "packages/venia-concept/static",
-                "packages/venia-concept/templates",
-                "packages/venia-concept/server.js",
-                "packages/venia-concept/venia-upward.yml",
-                "packages/venia-concept/validate-environment.js"
-            ],
+            "src": "packages/venia-concept/{.env.dist,static,templates,server.js,venia-upward.yml,validate-environment.js}",
             "use": "@now/static"
         }
     ],
